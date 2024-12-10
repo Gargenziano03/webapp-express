@@ -37,10 +37,10 @@
 * release_year| YEAR - NULL
 * abstract | TEXT(500) - NULL
 * image | VARCHAR(255) - NULL
-* created-at | TIMESTAMP - NOTNULL
-* updated | TIMESTAMP - NOTNULL
+* created_at | TIMESTAMP - NOTNULL
+* updated_at | TIMESTAMP - NOTNULL
 
-## Reviews Table 
+## Reviews Table (one to many)
 * id | PK - AI
 * movie_id | FK 
 * name | VARCHAR(255) - NOTNULL
