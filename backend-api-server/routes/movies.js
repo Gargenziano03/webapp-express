@@ -4,9 +4,16 @@ const connection = require('../database/connection')
 
 router.get('/', (req, res) => {
 
-    res.json({
-        movies: 'all movie here'
+
+
+    connection.query(`SELECT * FROM movies`, (err, results) => {
+        if (err) return res.status(500).json({ err: err })
+
+
+        res.json({
+            movies: results
+        })
     })
 })
 
-module.exports = router
+module.exports = router;
