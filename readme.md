@@ -15,7 +15,7 @@
 - Inserire un middleware per le rotte inesistenti
 - Inserire un middleware per la gestione errori
 
-# Book Reviews App
+# Movies Reviews App
 * Un’app di recensione di film in cui si possono lasciare reviews pubblici.
 
 # descrizione
