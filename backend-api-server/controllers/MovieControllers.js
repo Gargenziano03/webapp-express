@@ -42,11 +42,11 @@ function show(req, res) {
 // Funzione che gestisce la richiesta POST
 function review(req, res) {
     const movie_id = req.params.id
-    const { username, review, vote } = req.body
+    const { name, text, vote } = req.body
 
-    const sql = "INSERT INTO `reviews` SET username=?, review=?, vote=?, book_id=?"
+    const sql = "INSERT INTO `reviews` SET name=?, text=?, vote=?, movie_id=?"
 
-    connection.query(sql, [username, review, vote, movie_id, reviewDate], (err, result) => {
+    connection.query(sql, [name, text, vote, movie_id], (err, result) => {
         if (err) return res.status(500).json({ error: err })
         return res.status(201).json({ success: true })
     })
