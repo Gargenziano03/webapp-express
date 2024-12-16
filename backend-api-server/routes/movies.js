@@ -8,4 +8,6 @@ router.get('/', MovieController.index);
 // Definisce la rotta GET per ottenere un singolo film, dato il suo ID
 router.get('/:id', MovieController.show)
 
+router.post('/id/review', MovieController.review)
+
 module.exports = router
