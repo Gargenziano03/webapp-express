@@ -18,7 +18,7 @@ function show(req, res) {
 
     const id = req.params.id
     const sql = `SELECT * FROM movies WHERE id = ? `
-    const reviewsSql = `SELECT * FROM reviews WHERE movie_id = ? `
+    const reviewsSql = `SELECT * FROM reviews WHERE movie_id = ? ORDER BY id DESC`
 
     //query per ottenere il film con l'ID specificato
     connection.query(sql, [id], (err, results) => {
